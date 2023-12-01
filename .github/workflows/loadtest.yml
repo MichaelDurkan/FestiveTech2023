@@ -1,19 +1,16 @@
 - name: Checkout
-      uses: actions/checkout@v3
-
+      uses:actions/checkout@v3
 - name: Login to Azure
-      uses: azure/login@v1
-      continue-on-error: false
+      uses:azure/login@v1
+      continue-on-error:false
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+      creds: ${{ secrets.AZURE_CREDENTIALS }}
 - name: 'Azure Load Testing'
       uses: azure/load-testing@v1
       with:
         loadTestConfigFile: 'config.yaml'
         loadTestResource: <load-testing-resource>
         resourceGroup: <load-testing-resource-group>
-
 - uses: actions/upload-artifact@v2
       with:
         name: loadTestResults
