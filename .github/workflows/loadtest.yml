@@ -1,0 +1,17 @@
+- name: Checkout
+  uses: actions/checkout@v3
+- name: Login to Azure
+  uses: azure/login@v1
+  continue-on-error: false
+  with:
+  creds: ${{ secrets.AZURE_CREDENTIALS }}
+- name: 'Azure Load Testing'
+  uses: azure/load-testing@v1
+  with:
+  loadTestConfigFile: 'config.yaml'
+  loadTestResource: FestiveTech2023-ALT
+  resourceGroup: FestiveTech-ALT
+- uses: actions/upload-artifact@v2
+      with:
+        name: loadTestResults
+        path: ${{ github.workspace }}/loadTest
