@@ -12,6 +12,6 @@
   loadTestResource: FestiveTech2023-ALT
   resourceGroup: FestiveTech-ALT
 - uses: actions/upload-artifact@v2
-      with:
-        name: loadTestResults
-        path: ${{ github.workspace }}/loadTest
+  with:
+  name: loadTestResults
+  path: ${{ github.workspace }}/loadTest
