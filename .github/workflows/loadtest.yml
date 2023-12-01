@@ -1,5 +1,5 @@
-- name:Checkout
-      uses:actions/checkout@v3
+- name: Checkout
+  uses: actions/checkout@v3
       
 - name: Azure authentication
   uses: azure/login@v1
@@ -13,7 +13,8 @@
     loadTestResource: <load-testing-resource>
     resourceGroup: <load-testing-resource-group>
 
-- uses: actions/upload-artifact@v2
-      with:
-        name: loadTestResults
-        path: ${{ github.workspace }}/loadTest
+- name: "Test Results"  
+  uses: actions/upload-artifact@v2
+  with:
+    name: loadTestResults
+      path: ${{ github.workspace }}/loadTest
