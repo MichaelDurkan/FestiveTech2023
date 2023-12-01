@@ -1,0 +1,22 @@
+displayName: URL Test 1
+testPlan: quick_test.jmx
+description: URL Test 1
+engineInstances: 1
+testId: 5b80d605-68ba-405d-9b6a-be3f1275492a
+testType: JMX
+splitAllCSVs: False
+failureCriteria: []
+env:
+- name: domain
+  value: festivetech2023-webapp.azurewebsites.net
+- name: protocol
+  value: https
+- name: threads_per_engine
+  value: 50
+- name: ramp_up_time
+  value: 30
+- name: duration_in_sec
+  value: 120
+autoStop:
+  errorPercentage: 90
+  timeWindow: 60
