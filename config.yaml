@@ -12,11 +12,11 @@ env:
 - name: protocol
   value: https
 - name: threads_per_engine
-  value: 50
+  value: 200
 - name: ramp_up_time
   value: 30
 - name: duration_in_sec
-  value: 120
+  value: 300
 autoStop:
   errorPercentage: 90
   timeWindow: 60
