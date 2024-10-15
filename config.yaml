@@ -16,7 +16,7 @@ env:
 - name: ramp_up_time
   value: 30
 - name: duration_in_sec
-  value: 300
+  value: 120
 autoStop:
   errorPercentage: 90
   timeWindow: 60
